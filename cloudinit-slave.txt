@@ -35,9 +35,5 @@ runcmd:
   - chown -R spark.spark /home/spark/hadoop-2.7.4
   - mkdir /mnt/spark/
   - chown spark.spark /mnt/spark
-  - su -c "sudo fallocate -l 200G /mnt/spark/swapfile" spark
-  - su -c "sudo chmod 600 /mnt/spark/swapfile" spark
-  - su -c "sudo mkswap /mnt/spark/swapfile" spark
-  - su -c "sudo swapon /mnt/spark/swapfile" spark
   - su -c "/home/spark/spark-2.2.0-bin-hadoop2.7/sbin/start-slave.sh --work-dir /mnt/spark spark://172.16.1.4:7077" spark
   - su -c "JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/ /home/spark/hadoop-2.7.4/sbin/hadoop-daemon.sh --config /home/spark/hadoop-2.7.4/etc/hadoop/ --script hdfs start datanode" spark
