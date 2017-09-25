@@ -167,6 +167,19 @@
                             "priority": 1012,
                             "direction": "Inbound"
                         }
+                    },
+                    {
+                        "name": "zeppelin",
+                        "properties": {
+                            "protocol": "TCP",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "9000",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 1013,
+                            "direction": "Inbound"
+                        }
                     }
                 ]
             }
