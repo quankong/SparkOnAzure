@@ -12,7 +12,7 @@ runcmd:
   - cp /home/spark/zeppelin-0.7.3-bin-all/conf/zeppelin-env.sh.template /home/spark/zeppelin-0.7.3-bin-all/conf/zeppelin-env.sh
   - echo "export ZEPPELIN_PORT=9999" >> /home/spark/zeppelin-0.7.3-bin-all/conf/zeppelin-env.sh
   - /home/spark/zeppelin-0.7.3-bin-all/bin/zeppelin-daemon.sh start
-  - 'wget http://mirrors.ocf.berkeley.edu/apache/hadoop/core/hadoop-2.7.4/hadoop-2.7.4.tar.gz -O /home/spark/hadoop-2.7.4.tar.gz'
+  - 'wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.4/hadoop-2.7.4.tar.gz -O /home/spark/hadoop-2.7.4.tar.gz'
   - tar -xzf /home/spark/hadoop-2.7.4.tar.gz -C /home/spark/
   - rm /home/spark/hadoop-2.7.4.tar.gz
   - cp /home/spark/hadoop-2.7.4/share/hadoop/tools/lib/azure-storage-2.0.0.jar /home/spark/spark-2.2.0-bin-hadoop2.7/jars/azure-storage-2.2.0.jar
